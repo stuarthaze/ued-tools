@@ -26,8 +26,8 @@ In this stage we want to infer the most likely trajectory of the atoms from the 
 
 Functions and classes for these steps are located in ./lib/Ediff_functions
 The most important of these are
-refineStructure_v14 - Performs the optimization using experimental data, the crystal structure and the model as input
-DiffractionCalculator6  - A tool for calculating realistic electron diffraction patterns.  This can be used for indexing or cross-checking, but is rather slow for fitting purposes
+* refineStructure_v14 - Performs the optimization using experimental data, the crystal structure and the model as input
+* DiffractionCalculator6  - A tool for calculating realistic electron diffraction patterns.  This can be used for indexing or cross-checking, but is rather slow for fitting purposes
 
 
 # Example usage
