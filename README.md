@@ -12,4 +12,23 @@ These experiments typically have low signal-to-noise ratios, so the measurement 
 * Averaging and uncertainty estimation
 * Image distortion correction
 
+Functions and classes for these steps are located in ./lib/Data_Processing
+The most important classes are the following:
+* ImageProcessingClass2 - Tool for creating a beam-stop mask, locating diffraction spots, and generating ROIs
+* ScanProcessingClass2/3 - Takes an instance of ImageProcessingClass2 and experimental data and returns a reduced data set
+* ImageDistortionCalculator - Calculates the distortion of a diffraction image based on an ideal image
+
 # 2. Structure refinement
+In this stage we want to infer the most likely trajectory of the atoms from the reduced diffraction data. This involves the following steps:
+* Indexing: Assigning contributions of (h,k,l) indices to ROIs
+* Generating a model based on prior knowledge of the system
+* Optimization of atom positions to mimimize loss function (disagreement between experimental and calculated intensities and prior function)
+
+Functions and classes for these steps are located in ./lib/Ediff_functions
+The most important of these are
+refineStructure_v14 - Performs the optimization using experimental data, the crystal structure and the model as input
+DiffractionCalculator6  - A tool for calculating realistic electron diffraction patterns.  This can be used for indexing or cross-checking, but is rather slow for fitting purposes
+
+
+# Example usage
+Livescripts showing the correct usage of the functions and classes above will be provided in the examples folder
