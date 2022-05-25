@@ -32,3 +32,7 @@ The most important of these are
 
 # Example usage
 Livescripts showing the correct usage of the functions and classes above will be provided in the examples folder
+
+
+### Note
+The files contained in Crystallography_fileIO are not my own. See licence.txt for credits.
